@@ -1,0 +1,9 @@
+#contact-form, #contact-page-content{
+    width: 100%;
+    max-width: 50rem;
+    margin: auto auto;
+}
+
+#messageInput{
+    height: 300px;
+}
