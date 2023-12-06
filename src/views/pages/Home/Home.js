@@ -39,11 +39,11 @@ export default function Home() {
         <div className='section'>
           <div className='section-title-container'>
             <h2 className='section-title'>About Us</h2>
-            <h4 className='section-subtitle'>Describe your business</h4>
+            <h4 className='section-subtitle'>Learn about our business.</h4>
           </div>
             <Row align='left'>
                 <Col md='6'>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
+                  <p>Welcome to Got Teacakes?, where our passion for exquisite teacakes takes center stage! As a dedicated small business, Got Teacakes? takes pride in crafting delectable teacakes that are more than just desserts – they're an experience. Nestled in the heart of [Location], our journey began with a simple mission: to bring joy to your tea time with our signature teacakes. Handcrafted with love and the finest ingredients, each teacake is a testament to our commitment to quality and flavor. Whether you're savoring a classic vanilla teacake or indulging in our unique seasonal creations, every bite is a moment of pure bliss. Join us on this sweet adventure, and let Got Teacakes? be your go-to destination for irresistible teacakes that elevate your tea-drinking experience.</p> 
                 </Col>
                 <Col md='6' className='section-image-lg'>
                 </Col>
@@ -53,11 +53,11 @@ export default function Home() {
         <div className='section'>
             <div className='section-title-container'>
                 <h2 className='section-title'>What We Do</h2>
-                <h4 className='section-subtitle'>Describe What You Offer</h4>
+                <h4 className='section-subtitle'>Proving delcious teacakes.</h4>
             </div>
             <Row align='left'>
             <Col md='8'>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>At Got Teacakes?, we specialize in curating a delightful range of teacakes that are as diverse as they are delicious. Our skilled bakers infuse passion into every step of the baking process, creating teacakes that are not just sweet treats but a celebration of flavors. From timeless classics to innovative and seasonal creations, we pride ourselves on offering a teacake for every palate.</p>
                 </Col>
               <Col md='4' className='section-image-sm'>
                 </Col>
@@ -66,8 +66,8 @@ export default function Home() {
         </div>
         <div className='section'>
             <div className='section-title-container'>
-                <h2 className='section-title'>Services</h2>
-                <h4 className='section-subtitle'>List Your Services Here</h4>
+                <h2 className='section-title'>Flavors</h2>
+                <h4 className='section-subtitle'>Check out our featured flavors.</h4>
             </div>
           <Row align='left'>
             <Col lg='4'>

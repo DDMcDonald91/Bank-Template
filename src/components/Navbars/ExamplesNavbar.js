@@ -58,7 +58,7 @@ function ExamplesNavbar() {
             to="/"
             tag={Link}
           >
-            Bank
+            Got Teacakes?
           </NavbarBrand>
           <button
             aria-expanded={navbarCollapse}
@@ -85,7 +85,7 @@ function ExamplesNavbar() {
             </NavItem>
             <NavItem>
               <NavLink to="/our-services" tag={Link}>
-                Services
+                Teacakes
               </NavLink>
             </NavItem>
             <NavItem>

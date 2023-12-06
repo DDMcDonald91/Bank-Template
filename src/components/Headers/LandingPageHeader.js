@@ -27,7 +27,7 @@ function LandingPageHeader() {
       <div
         style={{
           backgroundImage:
-            "url(" + require("assets/img/christian-wiediger.jpg") + ")",
+            "url(" + require("assets/img/teacakes-header.jpeg") + ")",
         }}
         className="page-header"
         data-parallax={true}
@@ -36,8 +36,8 @@ function LandingPageHeader() {
         <div className="filter" />
         <Container>
           <div className="motto text-center">
-            <h1>Bank Template</h1>
-            <h3>Start upscaling your online presence now!</h3>
+            <h1>Got Teacakes?</h1>
+            <h3>Wake and teacake.</h3>
             
           </div>
         </Container>
