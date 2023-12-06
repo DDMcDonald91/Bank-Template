@@ -60,3 +60,21 @@
     color: white;
     margin: auto auto;
 }
+
+
+@media screen and (min-width: 767px) {
+    .section-image-lg{
+        width: 100%;
+        height: 500px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    
+    .section-image-sm{
+        width: 100%;
+        height: 500px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    
+  }
