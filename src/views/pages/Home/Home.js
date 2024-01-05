@@ -2,9 +2,15 @@ import DemoFooter from 'components/Footers/DemoFooter'
 import LandingPageHeader from 'components/Headers/LandingPageHeader'
 import ExamplesNavbar from 'components/Navbars/ExamplesNavbar'
 import React, { useState } from 'react'
-import { Row, Col, Button, Card, CardBody, CardTitle, CardSubtitle, CardText, CardLink, Container, FormGroup, Label, Input } from 'reactstrap'
+import { Row, Col, Button, Card, CardBody, CardTitle, CardSubtitle, CardText, CardLink, CardImg, Container, FormGroup, Label, Input, ListGroupItem, ListGroupItemHeading, ListGroupItemText, ListGroup } from 'reactstrap'
 import './index.css'
 import '../../../assets/css/custom.css'
+import { Link } from 'react-router-dom'
+import FeaturedList from 'components/Products/FeaturedList'
+import { FaShoppingCart } from 'react-icons/fa'
+import { RiFilePaperLine } from 'react-icons/ri'
+import { MdAccessTime } from "react-icons/md";
+import SecondaryFeaturedList from 'components/Products/SecondaryFeaturedList'
 
 export default function Home() {
   // state
@@ -36,14 +42,33 @@ export default function Home() {
         <LandingPageHeader />
 
         <Container id='home-container' fluid>
+
+        <div className='section'>
+            <div className='section-title-container'>
+                <h2 className='section-title'>Featured Products</h2>
+                <h4 className='section-subtitle'>View our best sellers!</h4>
+            </div>
+            <FeaturedList />
+          <Link to='/products'>
+            <Button>
+              View Products
+            </Button>
+          </Link>
+        </div>
         <div className='section'>
           <div className='section-title-container'>
             <h2 className='section-title'>About Us</h2>
-            <h4 className='section-subtitle'>Describe your business</h4>
+            <h4 className='section-subtitle'>The BEST Delivery Service in DMV</h4>
           </div>
             <Row align='left'>
                 <Col md='6'>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
+                  <p>We strive to provide cultivation practices that are transparent and consistent. To ensure a high-quality experience, Look for dispensaries or growers with positive reviews and a transparent approach to cultivation. Personal preferences also play a role, so consider your desired effects when evaluating the strain.</p>
+                  <div>
+                    <br />
+                  <Link to='/about-us'>
+                    <Button>Learn More</Button>
+                  </Link>
+                  </div> 
                 </Col>
                 <Col md='6' className='section-image-lg'>
                 </Col>
@@ -52,64 +77,79 @@ export default function Home() {
         
         <div className='section'>
             <div className='section-title-container'>
-                <h2 className='section-title'>What We Do</h2>
-                <h4 className='section-subtitle'>Describe What You Offer</h4>
+                <h2 className='section-title'>Local Delivery Service</h2>
+                <h4 className='section-subtitle'>It doesn't get any easier.</h4>
             </div>
             <Row align='left'>
-            <Col md='8'>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <Col lg='4'>
+              <div style={{width: '100%', maxWidth: '35rem'}}>
+                  <CardBody>
+                    <div className='service-icon-container'>
+                      <FaShoppingCart className='service-icon' />
+                    </div>
+                      <CardTitle className='service-title'>1. Explore Our Catalog</CardTitle>
+                      <br />
+                      <CardText>
+                        <p>Browse our various products available for delivery.</p>
+                      </CardText>
+                      
+                  </CardBody>
+              </div>
+            </Col>
+            <Col lg='4'>
+              <div style={{width: '100%', maxWidth: '35rem'}}>
+                  <CardBody>
+                    <div className='service-icon-container'>
+                      <RiFilePaperLine className='service-icon' />
+                    </div>
+                      <CardTitle className='service-title'>2. Place An Online Order</CardTitle>
+                      <br />
+                      <CardText>
+                        <p>Place an order using our website for delivery.</p>
+                      </CardText>                      
+                  </CardBody>
+              </div>
+            </Col>
+            <Col lg='4'>
+              <div style={{width: '100%', maxWidth: '35rem'}}>
+                  <CardBody>
+                    <div className='service-icon-container'>
+                      <MdAccessTime className='service-icon'  />
+                    </div>
+                      <CardTitle className='service-title'>3. Receive Your Order</CardTitle>
+                      <br />
+                      <CardText>
+                        <p>Receive personal delivery of your order from our team.</p>
+                      </CardText>                      
+                  </CardBody>
+              </div>
+            </Col>
+          </Row>
+        </div>
+
+        <div className='section'>
+            <div className='section-title-container'>
+                <h2 className='section-title'>Get Started</h2>
+                <h4 className='section-subtitle'>Efficient and Quick Local Deliveries</h4>
+            </div>
+            <Row align='left'>
+            <Col md='6'>
+                  <p>We offer a variety of products, including flowers, edibles, concentrates, and topicals, to meet the diverse preferences and needs of consumers. Just submit a order form and our team will be with you immediately to assist you with your order.</p>
+                  <br />
+                  <Link to='/products'>
+                    <Button>
+                      Order Now
+                    </Button>
+                  </Link>
                 </Col>
-              <Col md='4' className='section-image-sm'>
+              <Col md='6' className='section-image-sm'>
                 </Col>
                 
             </Row>
         </div>
-        <div className='section'>
-            <div className='section-title-container'>
-                <h2 className='section-title'>Services</h2>
-                <h4 className='section-subtitle'>List Your Services Here</h4>
-            </div>
-          <Row align='left'>
-            <Col lg='4'>
-              <Card style={{width: '100%', maxWidth: '35rem'}}>
-                  <CardBody>
-                      <CardTitle>Service 1</CardTitle>
-                      <br />
-                      <CardSubtitle className="mb-2 text-muted">Service 1 subtitle</CardSubtitle>
-                      <CardText>
-                        <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      </CardText>
-                      
-                  </CardBody>
-              </Card>
-            </Col>
-            <Col lg='4'>
-              <Card style={{width: '100%', maxWidth: '35rem'}}>
-                  <CardBody>
-                      <CardTitle>Service 2</CardTitle>
-                      <br />
-                      <CardSubtitle className="mb-2 text-muted">Service 2 subtitle</CardSubtitle>
-                      <CardText>
-                        <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      </CardText>                      
-                  </CardBody>
-              </Card>
-            </Col>
-            <Col lg='4'>
-              <Card style={{width: '100%', maxWidth: '35rem'}}>
-                  <CardBody>
-                      <CardTitle>Service 3</CardTitle>
-                      <br />
-                      <CardSubtitle className="mb-2 text-muted">Service 3 subtitle</CardSubtitle>
-                      <CardText>
-                        <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      </CardText>                      
-                  </CardBody>
-              </Card>
-            </Col>
-          </Row>
-        </div>
-        <div className='section'>
+
+        </Container>
+        <div className='section' id='newsletter-section'>
           <div id='newsletter'>
             <div id='overlay'>
             <div id='newsletter-content'>
@@ -141,7 +181,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-        </Container>
         <DemoFooter />
     </>
   )

@@ -1,0 +1,11 @@
+#order-sheet-container{
+    background-color: sticky;
+}
+
+
+@media screen and (max-width: 767px) {
+    #order-sheet-container{
+        position: relative;
+    }
+    
+  }

@@ -1,21 +1,3 @@
-/*!
-
-=========================================================
-* Paper Kit React - v1.3.2
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/paper-kit-react
-
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/paper-kit-react/blob/main/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Route, Navigate, Routes } from "react-router-dom";
@@ -34,21 +16,30 @@ import Services from "views/pages/Services/Services";
 import Contact from "views/pages/Contact/Contact";
 import Login from "views/pages/Login/Login";
 import Admin from "views/pages/Admin/Admin";
+import Products from "views/pages/Products/Products";
+import { OrdersProvider } from "context/OrdersContext.js";
+import Confirmation from "views/pages/Confirmation/Confirmation";
 // others
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
-  <BrowserRouter>
-    <Routes>
-      <Route path='/' element={<Home />} />
-      <Route path='/about-us' element={<About />} />
-      <Route path='/our-services' element={<Services />} />
-      <Route path='/contact-us' element={<Contact />} />
+  <OrdersProvider>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/about-us' element={<About />} />
+        <Route path='/our-services' element={<Services />} />
+        <Route path='/products' element={<Products />} />
+        <Route path='/contact-us' element={<Contact />} />
 
-      <Route path="/admin" element={<Admin />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="*" element={<Navigate to="/" replace />} />
-    </Routes>
-  </BrowserRouter>
+        <Route path='/confirmation' element={<Confirmation />} />
+
+        <Route path="/admin" element={<Admin />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+
+      </Routes>
+    </BrowserRouter>
+  </OrdersProvider>
 );

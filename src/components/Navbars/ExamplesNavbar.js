@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 // nodejs library that concatenates strings
 import classnames from "classnames";
 
+import logo from '../../assets/img/logo3.png'
+
 // reactstrap components
 import {
   Collapse,
@@ -14,6 +16,8 @@ import {
   Container,
   Button,
 } from "reactstrap";
+import OrderSheetModal from "components/OrderSheet/OrderSheetModal";
+import OrderSheetWidget from "components/OrderSheet/OrderSheetWidget";
 
 function ExamplesNavbar() {
   const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
@@ -58,7 +62,7 @@ function ExamplesNavbar() {
             to="/"
             tag={Link}
           >
-            Bank
+            <img src={logo} style={{height: '100px', width: '100px'}} />
           </NavbarBrand>
           <button
             aria-expanded={navbarCollapse}
@@ -89,12 +93,17 @@ function ExamplesNavbar() {
               </NavLink>
             </NavItem>
             <NavItem>
-              <Button
-                to="/contact-us"
-                tag={Link}
-              >
-                <i className="nc-icon nc-email-85" style={{paddingRight: '5px'}}></i> Contact Us
-              </Button>
+              <NavLink to="/products" tag={Link}>
+                Products
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink to="/contact-us" tag={Link}>
+                Contact
+              </NavLink>
+            </NavItem>
+            <NavItem>
+            <OrderSheetModal />
             </NavItem>
           </Nav>
         </Collapse>

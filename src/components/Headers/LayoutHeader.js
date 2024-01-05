@@ -32,7 +32,7 @@ function ProfilePageHeader(props) {
         data-parallax={true}
         ref={pageHeader}
       >
-        <h1 style={{color: 'white'}}>{props.title}</h1>
+        <h1 style={{color: 'white', fontWeight: 'bold', zIndex: '10'}}>{props.title}</h1>
         <div className="filter" />
       </div>
     </>
