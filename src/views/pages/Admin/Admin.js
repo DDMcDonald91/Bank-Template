@@ -132,10 +132,7 @@ function Admin() {
           <Row>
             <Col className="ml-auto mr-auto text-center" md="6">
               <p>
-                An imaginery business owner for the demo of this template, Janet
-                Fakerson — the name used by Louisiana-raised, Texas-based web
-                developer Dominik M — is a talented and dedicated business owner
-                whom gives back to their community.
+                Admin section for adding, updating, and deleting products.
               </p>
               <br />
               <UncontrolledDropdown>

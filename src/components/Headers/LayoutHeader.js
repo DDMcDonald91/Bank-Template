@@ -28,7 +28,7 @@ function ProfilePageHeader(props) {
           backgroundImage:
             "url(" + require(`assets/img/${props.image}`) + ")",
         }}
-        className="page-header page-header-xs"
+        className="page-header page-header-xs p-2"
         data-parallax={true}
         ref={pageHeader}
       >
