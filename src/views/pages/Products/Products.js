@@ -6,10 +6,17 @@ import LayoutHeader from '../../../components/Headers/LayoutHeader';
 import OrderSheetWidget from 'components/OrderSheet/OrderSheetWidget';
 import OrderSheet from 'components/OrderSheet/OrderSheet';
 import './index.css'
+import DemoFooter from 'components/Footers/DemoFooter';
+import SEO from 'components/SEO/SEO';
 
 export default function Products() {
   return (
     <div>
+      <SEO 
+        title='Loyal 4 DMV || View Our Products' 
+        content='View our various products and place an order for local delivery!' 
+        page="https://www.loyaldmv.com/products" 
+      />
         <ExamplesNavbar />
         <LayoutHeader title="Our Products" image='loyal-spare4.jpg' />
         <Container className='layout-page-content'>
@@ -24,6 +31,7 @@ export default function Products() {
             </Col>
           </Row>
         </Container>
+        <DemoFooter />
     </div>
   )
 }

@@ -6,10 +6,17 @@ import { FaShoppingCart } from 'react-icons/fa'
 import { RiFilePaperLine } from 'react-icons/ri'
 import { MdAccessTime } from "react-icons/md";
 import '../../../assets/css/custom.css'
+import DemoFooter from 'components/Footers/DemoFooter';
+import SEO from 'components/SEO/SEO';
 
 export default function Services() {
   return (
     <div>
+      <SEO 
+        title='Loyal 4 DMV || View Our Services' 
+        content='We pride ourselves on being the best marijuana delivery service in the DMV area! Learn more about our delivery services.' 
+        page="https://www.loyaldmv.com/our-services" 
+      />
       <ExamplesNavbar />
       <LayoutHeader title="Our Services" image='loyal-spare3.jpg' />
       <Container className='layout-page-content'>
@@ -64,6 +71,7 @@ export default function Services() {
             </Col>
           </Row>
       </Container>
+      <DemoFooter />
     </div>
   );
 }

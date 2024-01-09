@@ -3,10 +3,17 @@ import React from 'react';
 import { Container } from 'reactstrap';
 import LayoutHeader from '../../../components/Headers/LayoutHeader';
 import '../../../assets/css/custom.css'
+import DemoFooter from 'components/Footers/DemoFooter';
+import SEO from 'components/SEO/SEO';
 
 export default function About() {
   return (
     <div>
+      <SEO 
+        title='Loyal 4 DMV || About Us' 
+        content='Learn more about Loyal 4 DMV, the best marijuana delivery service in the Washington DMV area!' 
+        page="https://www.loyaldmv.com/about-us" 
+      />
       <ExamplesNavbar />
       <LayoutHeader title="About Us" image='loyal-spare2.jpg' />
       <Container className='layout-page-content'>
@@ -20,6 +27,7 @@ export default function About() {
           We offer a variety of products, including flowers, edibles, concentrates, and topicals, to meet the diverse preferences and needs of consumers. We do Regular testing for potency, contaminants, and pesticides to ensure the safety and quality of the products
         </p>
       </Container>
+      <DemoFooter />
     </div>
   );
 }

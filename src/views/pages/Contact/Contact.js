@@ -4,6 +4,8 @@ import React, { useState, useRef } from 'react'
 import { Container, FormGroup, Label, Input, Button } from 'reactstrap'
 import emailjs from '@emailjs/browser';
 import './index.css'
+import DemoFooter from 'components/Footers/DemoFooter';
+import SEO from 'components/SEO/SEO';
 
 export default function Contact() {
     const [name, setName] = useState('')
@@ -44,6 +46,11 @@ export default function Contact() {
     
   return (
     <div>
+      <SEO 
+        title='Loyal 4 DMV || Contact Us Today' 
+        content='Reach out to us today for help with placing an order for delivery. If you have any questions or concerns, we are here to help in any way!' 
+        page="https://www.loyaldmv.com/contact-us" 
+      />
         <ExamplesNavbar />
         <LayoutHeader title="Contact Us" image='loyal-contact.jpg'  />
         <Container className='layout-page-content'>
@@ -100,6 +107,7 @@ export default function Contact() {
                 </Button>
                 </form>
         </Container>
+        <DemoFooter />
     </div>
   )
 }

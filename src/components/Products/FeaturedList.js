@@ -70,7 +70,7 @@ export default function FeaturedList() {
                         </CardTitle>
                         <br />
                         <CardText>
-                          <p onClick={() => toggleModal(index)}>
+                          <p style={{fontWeight: 'normal'}} onClick={() => toggleModal(index)}>
                             {product.description.slice(0, 100)}...
                             <br />
                             <span style={{ color: 'blue', fontSize: '14px' }}>
