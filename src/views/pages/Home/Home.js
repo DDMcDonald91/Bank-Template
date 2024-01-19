@@ -1,8 +1,6 @@
-import DemoFooter from 'components/Footers/DemoFooter'
+/* eslint-disable */
 import LandingPageHeader from 'components/Headers/LandingPageHeader'
-import ExamplesNavbar from 'components/Navbars/ExamplesNavbar'
 import React, { useState } from 'react'
-import { Row, Col, Button, Card, CardBody, CardTitle, CardSubtitle, CardText, CardLink, Container, FormGroup, Label, Input } from 'reactstrap'
 import './index.css'
 import '../../../assets/css/custom.css'
 
