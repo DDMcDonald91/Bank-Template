@@ -58,7 +58,7 @@ function ExamplesNavbar() {
             to="/"
             tag={Link}
           >
-            Bank
+            4Sons Locksmith
           </NavbarBrand>
           <button
             aria-expanded={navbarCollapse}

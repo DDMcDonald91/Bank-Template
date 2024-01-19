@@ -32,9 +32,12 @@ export default function Home() {
   }
   return (
     <>
+    {/*}
         <ExamplesNavbar />
+        {*/}
         <LandingPageHeader />
 
+{/*}
         <Container id='home-container' fluid>
         <div className='section'>
           <div className='section-title-container'>
@@ -142,7 +145,9 @@ export default function Home() {
           </div>
         </div>
         </Container>
+
         <DemoFooter />
+                {*/}
     </>
   )
 }
