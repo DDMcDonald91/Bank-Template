@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from "react";
 
 // reactstrap components
@@ -14,18 +15,11 @@ function DemoFooter() {
                   Bank
               </li>
               <li>
-                <a
-                  href="#"
-                >
+
                   About 
-                </a>
               </li>
               <li>
-                <a
-                  href="#"
-                >
                   Services
-                </a>
               </li>
             </ul>
           </nav>
