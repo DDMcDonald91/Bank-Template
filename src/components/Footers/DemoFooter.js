@@ -11,12 +11,7 @@ function DemoFooter() {
           <nav className="footer-nav">
             <ul>
               <li>
-                <a
-                  href="https://www.creative-tim.com?ref=pkr-footer"
-                  target="_blank"
-                >
                   Bank
-                </a>
               </li>
               <li>
                 <a
