@@ -28,23 +28,33 @@ export default function ProductsList() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [selectedType, setSelectedType] = useState(null);
-  const [addedToOrder, setAddedToOrder] = useState(false); // Added state for notification
-
-  // Use an array of booleans to manage the modal states
+  const [addedToOrder, setAddedToOrder] = useState(false);
   const [isOpenArray, setIsOpenArray] = React.useState([]);
-
   const { orders, setOrders, addToOrder } = useOrders();
 
   const fetchData = async () => {
     setLoading(true);
-
+  
     try {
       const querySnapshot = await getDocs(collection(db, "products"));
       const productList = querySnapshot.docs.map((doc) => doc.data());
-      setData(productList);
-
+  
+      // Define the order of product types
+      const typeOrder = ['flower', 'edible', 'apparatus', 'shatter/hash', 'prerolls'];
+  
+      // Sort products based on the order of types and then by price (most expensive to least expensive)
+      const sortedProductList = productList.sort((a, b) => {
+        const typeComparison = typeOrder.indexOf(a.type) - typeOrder.indexOf(b.type);
+        if (typeComparison !== 0) {
+          return typeComparison;
+        }
+        return b.options[0].price - a.options[0].price; // Assuming options array contains size and price
+      });
+  
+      setData(sortedProductList);
+  
       // Initialize isOpenArray with false values for each modal
-      setIsOpenArray(new Array(productList.length).fill(false));
+      setIsOpenArray(new Array(sortedProductList.length).fill(false));
     } catch (error) {
       console.log(error);
       alert("Error with fetching data. Check console.");
@@ -52,6 +62,7 @@ export default function ProductsList() {
       setLoading(false);
     }
   };
+  
 
   // Toggle the state of a specific modal
   const toggleModal = (index) => {

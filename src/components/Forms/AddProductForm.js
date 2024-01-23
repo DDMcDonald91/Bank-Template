@@ -181,6 +181,7 @@ const handleTHCChange = (e) => {
             <FormGroup>
               <Label for='productName'>Product Name</Label>
               <Input
+                required
                 id='productName'
                 name='name'
                 placeholder='Enter your product name'
@@ -194,6 +195,7 @@ const handleTHCChange = (e) => {
             <FormGroup>
               <Label for='productDescription'>Product Description</Label>
               <Input
+              required
                 id='productDescription'
                 name='description'
                 placeholder='Enter your product description'
@@ -213,6 +215,7 @@ const handleTHCChange = (e) => {
                 id='productType'
                 name='type'
                 type='select'
+                required
                 value={formData.type}
                 onChange={handleInputChange}
               >
@@ -262,6 +265,7 @@ const handleTHCChange = (e) => {
                 <FormGroup>
                   <Label for={`optionSize${index}`}>Size</Label>
                   <Input
+                    required
                     id={`optionSize${index}`}
                     name='size'
                     type='text'
@@ -272,6 +276,7 @@ const handleTHCChange = (e) => {
                 <FormGroup>
                   <Label for={`optionPrice${index}`}>Price</Label>
                   <Input
+                    required
                     id={`optionPrice${index}`}
                     name='price'
                     type='number'
