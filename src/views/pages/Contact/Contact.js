@@ -28,9 +28,9 @@ export default function Contact() {
 
         await emailjs.sendForm('service_6bweyl6', 'template_jqy36q7', form.current, 'JSioancmTaTHqGHRZ')
         .then((result) => {
-          alert('Demo functionality active.')
+          alert('Thank you for reaching out! We will be in touch shortly!')
         }, (error) => {
-          alert('Demo functionality active.')
+          alert('We are sorry, but there has been an error. Please try again.')
           console.log(error)
         });
 

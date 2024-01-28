@@ -25,6 +25,10 @@ import {
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
+  Modal,
+  ModalHeader,
+  ModalBody,
+  ModalFooter
 } from "reactstrap";
 
 // core components
@@ -55,6 +59,13 @@ function Admin() {
   // state
   const [user, setUser] = useState();
   const [loading, setLoading] = useState(false);
+
+
+  // State for the modal
+  const [modal, setModal] = useState(false);
+
+  const toggleModal = () => setModal(!modal);
+
 
   // useNavigate var
   const navigate = useNavigate();
@@ -136,26 +147,19 @@ function Admin() {
               </p>
               <br />
               <UncontrolledDropdown>
-                <DropdownToggle
-                  aria-expanded={false}
-                  aria-haspopup={true}
-                  caret
-                  className="btn-round"
-                  outline
-                  color="secondary"
-                  data-toggle="dropdown"
-                  id="dropdownMenuButton"
-                  type="button"
-                  style={{ color: "black" }}
-                >
-                  <i className="fa fa-cog" /> Settings
-                </DropdownToggle>
-                <DropdownMenu aria-labelledby="dropdownMenuButton">
-                  <DropdownItem onClick={handleSignOut}>
-                    <p>Sign Out</p>
-                  </DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
+        <DropdownToggle
+          aria-expanded={false}
+          aria-haspopup={true}
+          caret
+          className="btn-round"
+          outline
+          color="secondary"
+          onClick={toggleModal}
+          style={{ color: "black" }}
+        >
+          <i className="fa fa-cog" /> Settings
+        </DropdownToggle>
+      </UncontrolledDropdown>
             </Col>
           </Row>
           <br />
@@ -201,6 +205,24 @@ function Admin() {
 
         </Container>
       </div>
+
+            {/* Modal for Logout */}
+            <Modal isOpen={modal} toggle={toggleModal}>
+        <ModalHeader toggle={toggleModal}><h3>Settings</h3></ModalHeader>
+        <ModalBody>
+          <p>You can log out here.</p>
+          {/* You can add more content to the modal if needed */}
+        </ModalBody>
+        <ModalFooter>
+          <Button color="primary" onClick={handleSignOut}>
+            Logout
+          </Button>
+          <Button color="secondary" onClick={toggleModal}>
+            Close
+          </Button>
+        </ModalFooter>
+      </Modal>
+
     </>
   );
 }
