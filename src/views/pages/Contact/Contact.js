@@ -26,7 +26,7 @@ export default function Contact() {
             return
         }
 
-        await emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
+        await emailjs.sendForm('service_6bweyl6', 'template_jqy36q7', form.current, 'JSioancmTaTHqGHRZ')
         .then((result) => {
           alert('Demo functionality active.')
         }, (error) => {

@@ -124,7 +124,7 @@ const handleEmailSend = async () => {
     };
 
     // Send the email using Email.js
-    await emailjs.send('service_1tt57aa', 'template_xw61xxy', templateParams, 'ROjDrDn9IcjRZkwBc');
+    await emailjs.send('service_6bweyl6', 'template_kiunp7a', templateParams, 'JSioancmTaTHqGHRZ');
 
     console.log('Email sent successfully!');
     
