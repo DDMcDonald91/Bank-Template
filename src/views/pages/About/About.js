@@ -1,25 +1,45 @@
+/* eslint-disable */
+
 import ExamplesNavbar from 'components/Navbars/ExamplesNavbar';
 import React from 'react';
 import { Container } from 'reactstrap';
 import LayoutHeader from '../../../components/Headers/LayoutHeader';
 import '../../../assets/css/custom.css'
+import DemoFooter from 'components/Footers/DemoFooter';
 
 export default function About() {
   return (
     <div>
       <ExamplesNavbar />
-      <LayoutHeader title="About Us" image='header.jpg' />
-      <Container className='layout-page-content'>
+      <LayoutHeader title="About Us" image={"url(" + require(`assets/img/4sons-header5.jpg`) + ")"} />
+      <Container align='center' className='layout-page-content'>
+        <div>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique et egestas quis ipsum suspendisse ultrices gravida. Nascetur ridiculus mus mauris vitae. Egestas maecenas pharetra convallis posuere morbi leo urna molestie. Ut porttitor leo a diam. Semper feugiat nibh sed pulvinar proin. Dolor sit amet consectetur adipiscing elit pellentesque habitant. Eget mauris pharetra et ultrices neque ornare aenean. Consectetur lorem donec massa sapien faucibus et molestie ac. Scelerisque eu ultrices vitae auctor eu augue ut lectus arcu. Sed sed risus pretium quam vulputate dignissim suspendisse. Odio tempor orci dapibus ultrices in iaculis nunc sed augue. Vel quam elementum pulvinar etiam. Cursus mattis molestie a iaculis at. Augue neque gravida in fermentum et sollicitudin ac. Pretium nibh ipsum consequat nisl vel pretium. Sagittis nisl rhoncus mattis rhoncus urna neque viverra.
+          Welcome to 4Sons Locksmiths, your go-to 24/7 locksmith service catering to the Shreveport and Bossier City areas in the state of Louisiana. At 4Sons Locksmiths, we recognize that lock and key emergencies can arise at any hour, day or night. Our team of highly skilled and dependable locksmiths is committed to providing continuous assistance to ensure your safety and tranquility.          <br />
           <br />
+          Whether you're facing a lockout situation at home, in your car, or at your business, or if you urgently require help with a lock or key problem, count on us. Our adept and professional locksmiths come equipped with cutting-edge tools and technology to efficiently handle a diverse range of locksmith services.
           <br />
-          Convallis posuere morbi leo urna molestie at elementum eu. Luctus venenatis lectus magna fringilla urna porttitor rhoncus dolor. Tincidunt arcu non sodales neque. Porttitor rhoncus dolor purus non enim praesent elementum facilisis. Dolor magna eget est lorem. Tristique senectus et netus et. Faucibus interdum posuere lorem ipsum dolor sit amet consectetur adipiscing. Nulla pharetra diam sit amet nisl suscipit. Nunc eget lorem dolor sed viverra ipsum nunc aliquet. Pellentesque adipiscing commodo elit at imperdiet dui accumsan sit. Ut ornare lectus sit amet est placerat. Ligula ullamcorper malesuada proin libero nunc consequat interdum varius. Et leo duis ut diam quam nulla. Vitae justo eget magna fermentum. Morbi tincidunt ornare massa eget egestas purus viverra. Amet venenatis urna cursus eget nunc scelerisque viverra mauris in. Suspendisse in est ante in nibh mauris cursus mattis molestie. Nisi vitae suscipit tellus mauris a diam maecenas sed.
-          <br />
-          <br />
-          Eget lorem dolor sed viverra ipsum nunc aliquet bibendum. Hendrerit gravida rutrum quisque non tellus orci. Sit amet nisl purus in mollis nunc. Elit duis tristique sollicitudin nibh. Ut lectus arcu bibendum at varius vel pharetra vel. Fermentum et sollicitudin ac orci. Vel elit scelerisque mauris pellentesque. Morbi tincidunt augue interdum velit euismod. Sed sed risus pretium quam. Tristique senectus et netus et malesuada. Felis bibendum ut tristique et egestas. Ac auctor augue mauris augue neque gravida in fermentum. Massa vitae tortor condimentum lacinia quis vel eros. Et netus et malesuada fames ac turpis egestas. Vitae semper quis lectus nulla at volutpat diam. Tellus molestie nunc non blandit.
+          Customer satisfaction ranks high on our list of priorities, and we take pride in delivering top-notch services at competitive rates. With years of experience in the locksmith industry, we've established a reputation for reliability, trustworthiness, and excellence.
         </p>
+        </div>
+        <br />
+        <div>
+          <h3>Why opt for 4Sons Locksmiths?</h3>
+          <br />
+          <ul>
+            <li><p>24/7 Emergency Service: We're available around the clock to assist you with any locksmith emergency.</p></li>
+            <li><p>Swift Response Time: Our team responds promptly to your calls, ensuring timely assistance.</p></li>
+            <li><p>Skilled Professionals: Our locksmiths are highly trained and experienced in addressing various lock and key issues.</p></li>
+            <li><p>Comprehensive Services: From lockouts to key replacements and security upgrades, we offer a broad spectrum of locksmith services.</p></li>
+          </ul>
+        </div>
+        <div>
+          <p>
+            Your security is our paramount concern, and we are dedicated to providing you with the best locksmith solutions tailored to your specific needs. Trust 4Sons Locksmiths for reliable and efficient locksmith services in Shreveport and Bossier City. Contact us at any time, day or night, and experience the peace of mind that comes with having a trusted locksmith partner at your service.
+          </p>
+        </div>
       </Container>
+      <DemoFooter />
     </div>
   );
 }

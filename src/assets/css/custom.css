@@ -1,8 +1,38 @@
 p{
-    font-size: 18px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-weight: bold;
+}
+
+.heading{
+    text-transform: uppercase;
 }
 
 .layout-page-content{
     padding-top: 50px;
     padding-bottom: 50px;
+    min-height: 100vh;
+}
+
+#shortened-header{
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    overflow: hidden;
+}
+
+#overlay{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1000;
 }

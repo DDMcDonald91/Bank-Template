@@ -18,9 +18,11 @@ import Services from "views/pages/Services/Services";
 import Contact from "views/pages/Contact/Contact";
 import Login from "views/pages/Login/Login";
 import Admin from "views/pages/Admin/Admin";
+import Industry from "views/pages/Industry/Industry";
 // others
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
 
 root.render(
   <BrowserRouter>
@@ -28,6 +30,7 @@ root.render(
       <Route path='/' element={<Home />} />
       <Route path='/about-us' element={<About />} />
       <Route path='/our-services' element={<Services />} />
+      <Route path='/our-services/:id' element={<Industry />} />
       <Route path='/contact-us' element={<Contact />} />
 
       <Route path="/admin" element={<Admin />} />

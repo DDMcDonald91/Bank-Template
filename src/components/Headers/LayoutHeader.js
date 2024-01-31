@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React from "react";
 
 // reactstrap components
@@ -25,14 +27,13 @@ function ProfilePageHeader(props) {
     <>
       <div
         style={{
-          backgroundImage:
-            "url(" + require(`assets/img/${props.image}`) + ")",
+          backgroundImage: props.image,
         }}
         className="page-header page-header-xs"
         data-parallax={true}
         ref={pageHeader}
       >
-        <h1 style={{color: 'white'}}>{props.title}</h1>
+        <h1 style={{color: 'white', zIndex: '1000'}}>{props.title}</h1>
         <div className="filter" />
       </div>
     </>

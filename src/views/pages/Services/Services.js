@@ -1,60 +1,104 @@
+/* eslint-disable */
+
 import ExamplesNavbar from 'components/Navbars/ExamplesNavbar';
-import React from 'react';
-import { Container, Row, Col, Card, CardBody, CardTitle, CardSubtitle, CardText } from 'reactstrap';
+import React, { useState, useEffect }from 'react';
+import { collection, getDocs } from "firebase/firestore"; 
+import { db } from "../../../firebase.js"
+import { Container, Row, Col, Card, CardBody, CardTitle, CardSubtitle, CardText, Button } from 'reactstrap';
 import LayoutHeader from '../../../components/Headers/LayoutHeader';
 import '../../../assets/css/custom.css'
+import { Link } from 'react-router-dom';
+import DemoFooter from 'components/Footers/DemoFooter.js';
 
 export default function Services() {
+  const [data, setData] = useState([]);
+    const [loading, setLoading] = useState(false);
+    const [fallback, setFallback] = useState("");
+
+
+  // Function to fetch list of services
+  const fetchData = async () => {
+    setLoading(true);
+
+    try {
+      const querySnapshot = await getDocs(collection(db, 'services'));
+      const servicesData = [];
+
+      querySnapshot.forEach((doc) => {
+        servicesData.push({ id: doc.id, ...doc.data() });
+      });
+
+      // Update the state with the collected data
+      setData(servicesData);
+      console.log(servicesData)
+    } catch (error) {
+      setFallback('Sorry there has been an error retrieving our services.');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // useEffect call to fetch data on render/load
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+
+
+  if(loading || !data) {
+    return(
+        <>
+        <p>
+            Loading...
+        </p>
+        </>
+    )
+  }
+
+  if(!loading && !data) {
+    return(
+        <p>{fallback}</p>
+    )
+  }
+
   return (
     <div>
       <ExamplesNavbar />
-      <LayoutHeader title="Our Services" image='bruno-abatti.jpg' />
-      <Container className='layout-page-content'>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique et egestas quis ipsum suspendisse ultrices gravida. Nascetur ridiculus mus mauris vitae. Egestas maecenas pharetra convallis posuere morbi leo urna molestie. Ut porttitor leo a diam. Semper feugiat nibh sed pulvinar proin. Dolor sit amet consectetur adipiscing elit pellentesque habitant. Eget mauris pharetra et ultrices neque ornare aenean. Consectetur lorem donec massa sapien faucibus et molestie ac. Scelerisque eu ultrices vitae auctor eu augue ut lectus arcu. Sed sed risus pretium quam vulputate dignissim suspendisse. Odio tempor orci dapibus ultrices in iaculis nunc sed augue. Vel quam elementum pulvinar etiam. Cursus mattis molestie a iaculis at. Augue neque gravida in fermentum et sollicitudin ac. Pretium nibh ipsum consequat nisl vel pretium. Sagittis nisl rhoncus mattis rhoncus urna neque viverra.
-          </p>
+      <LayoutHeader title="Our Services" image={"url(" + require(`assets/img/4sons-header3.jpg`) + ")"} />
+      <Container align='center' className='layout-page-content'>
+          <p>At 4Sons Locksmiths, we pride ourselves as a reliable source for locksmith services. From securing homes to ensuring on-the-road assistance, we specialize in addressing both residential and automotive locksmith needs. Explore our range of comprehensive services designed to enhance security, providing swift and reliable solutions for our valued customers.</p>
           <br />
-          <br />
-          <Row align='left'>
-            <Col lg='4'>
-              <Card style={{width: '100%', maxWidth: '35rem'}}>
-                  <CardBody>
-                      <CardTitle>Service 1</CardTitle>
-                      <br />
-                      <CardSubtitle className="mb-2 text-muted">Service 1 subtitle</CardSubtitle>
-                      <CardText>
-                        <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      </CardText>
-                      
-                  </CardBody>
-              </Card>
+          {data.length > 0 && (
+            <Row align="center">
+            {data.map((service) => (
+            <Col xs='12' md='6' key={service.id}>
+                <div style={{width: '100%', maxWidth: '35rem', color: 'black'}}>
+                    <CardBody>
+                        <CardTitle>
+                            <h3><span style={{textDecoration: 'underline'}}>{service.industry}</span></h3>
+                        </CardTitle>
+                        <CardText>
+                          <ul style={{listStyleType: 'none'}}>
+                          {service.industry_services.map((e) => {
+                            return(
+                              <li>
+                                  <p>{e.service}</p>
+                              </li>
+                            )
+                          })}
+                          </ul>
+                        </CardText>
+                        <Link to={`/our-services/${service.id}`}>
+                      <Button>Learn More</Button>
+                    </Link>
+                    </CardBody>
+                </div>
             </Col>
-            <Col lg='4'>
-              <Card style={{width: '100%', maxWidth: '35rem'}}>
-                  <CardBody>
-                      <CardTitle>Service 2</CardTitle>
-                      <br />
-                      <CardSubtitle className="mb-2 text-muted">Service 2 subtitle</CardSubtitle>
-                      <CardText>
-                        <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      </CardText>                      
-                  </CardBody>
-              </Card>
-            </Col>
-            <Col lg='4'>
-              <Card style={{width: '100%', maxWidth: '35rem'}}>
-                  <CardBody>
-                      <CardTitle>Service 3</CardTitle>
-                      <br />
-                      <CardSubtitle className="mb-2 text-muted">Service 3 subtitle</CardSubtitle>
-                      <CardText>
-                        <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      </CardText>                      
-                  </CardBody>
-              </Card>
-            </Col>
-          </Row>
+          ))}
+        </Row>
+        )}
       </Container>
+      <DemoFooter />
     </div>
   );
 }

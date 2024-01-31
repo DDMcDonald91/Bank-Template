@@ -15,6 +15,9 @@ import {
   Button,
 } from "reactstrap";
 
+// logo import
+import logo from '../../assets/img/4sons-logo.png'
+
 function ExamplesNavbar() {
   const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
   const [navbarCollapse, setNavbarCollapse] = React.useState(false);
@@ -58,7 +61,7 @@ function ExamplesNavbar() {
             to="/"
             tag={Link}
           >
-            4Sons Locksmith
+            <img src={logo} style={{height: '50px', width: 'auto'}} />
           </NavbarBrand>
           <button
             aria-expanded={navbarCollapse}
@@ -84,8 +87,13 @@ function ExamplesNavbar() {
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="/our-services" tag={Link}>
-                Services
+              <NavLink to="/our-services/hGLLyk7xsfYeEk89ilH2" tag={Link}>
+                Residential Services
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink to="/our-services/yrLJszOAnptQ0hrNkjD0" tag={Link}>
+                Automotive Services
               </NavLink>
             </NavItem>
             <NavItem>
