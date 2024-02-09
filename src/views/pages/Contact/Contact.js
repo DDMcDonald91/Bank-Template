@@ -3,7 +3,7 @@
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar";
 import LayoutHeader from "components/Headers/LayoutHeader";
 import React, { useState, useRef, useEffect } from "react";
-import { Container, FormGroup, Label, Input, Button, Alert } from "reactstrap";
+import { Container, FormGroup, Label, Input, Button, Alert, Row, Col } from "reactstrap";
 import emailjs from "@emailjs/browser";
 import "./index.css";
 import DemoFooter from "components/Footers/DemoFooter";
@@ -135,6 +135,8 @@ export default function Contact() {
         <br />
         <form ref={form} id="contact-form" onSubmit={handleSubmit}>
           {result.message && result.color && (<Alert color={result.color}>{result.message}</Alert>)}
+          <Row>
+          <Col xs='12' md='6'>
           <FormGroup>
             <Label for="firstName">First Name</Label>
             <Input
@@ -149,7 +151,8 @@ export default function Contact() {
               }}
             />
           </FormGroup>
-
+          </Col>
+          <Col xs='12' md='6'>
           <FormGroup>
             <Label for="lastName">Last Name</Label>
             <Input
@@ -164,8 +167,10 @@ export default function Contact() {
               }}
             />
           </FormGroup>
-
-          <FormGroup>
+          </Col>
+          </Row>
+              
+                <FormGroup>
             <Label for="phoneNumber">Phone Number</Label>
             <Input
               required
@@ -180,7 +185,7 @@ export default function Contact() {
             />
           </FormGroup>
 
-          <FormGroup>
+                <FormGroup>
             <Label for="email">Email</Label>
             <Input
               required
@@ -195,6 +200,8 @@ export default function Contact() {
             />
           </FormGroup>
 
+          
+          
           <FormGroup>
             <Label for="serviceSelect">Select Service</Label>
             <Input
