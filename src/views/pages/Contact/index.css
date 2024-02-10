@@ -7,3 +7,21 @@
 #messageInput{
     height: 300px;
 }
+
+
+.react-datepicker-wrapper{
+    width: 100%;
+}
+
+.react-datepicker__input-container{
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    color: #66615b;
+    width: 100%;
+    font-size: 14px;
+}
+
+#datePicker{
+    height: 40px;
+    width: 100%;
+}
