@@ -18,6 +18,7 @@ import "./index.css";
 import DemoFooter from "components/Footers/DemoFooter";
 import { db } from "../../../firebase.js";
 import { getDocs, collection } from "firebase/firestore";
+import SEO from "components/SEO/SEO";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
@@ -153,6 +154,13 @@ export default function Contact() {
 
   return (
     <div>
+      <SEO 
+    title='Contact 4Sons LLC || Shreveport/Bossier Locksmiths' 
+    content='Get in touch with 4Sons LLC for all your locksmith needs in the Shreveport/Bossier area. Reach out to our friendly team today!' 
+    page="https://www.4sonsllc.com/contact-us" 
+    keywords="Shreveport locksmiths contact, Bossier City locksmiths contact, locksmith contact information, locksmith phone number, locksmith email, locksmith location"
+/>
+
       <ExamplesNavbar />
       <LayoutHeader
         title="Contact Us"

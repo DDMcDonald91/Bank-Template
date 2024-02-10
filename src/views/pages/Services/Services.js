@@ -9,6 +9,7 @@ import LayoutHeader from '../../../components/Headers/LayoutHeader';
 import '../../../assets/css/custom.css'
 import { Link } from 'react-router-dom';
 import DemoFooter from 'components/Footers/DemoFooter.js';
+import SEO from 'components/SEO/SEO.js';
 
 export default function Services() {
   const [data, setData] = useState([]);
@@ -63,6 +64,13 @@ export default function Services() {
 
   return (
     <div>
+      <SEO 
+    title='Locksmith Services by 4Sons LLC || Shreveport/Bossier Area' 
+    content='Explore the comprehensive locksmith services offered by 4Sons LLC in the Shreveport/Bossier area. From residential to commercial locksmith solutions, we have you covered.'
+    page="https://www.4sonsllc.com/our-services" 
+    keywords="Shreveport locksmith services, Bossier City locksmith solutions, residential locksmith, commercial locksmith, automotive locksmith, key duplication, lock repair, lockout service, rekeying locks, master key system, high-security locks, safe installation, access control systems"
+/>
+
       <ExamplesNavbar />
       <LayoutHeader title="Our Services" image={"url(" + require(`assets/img/4sons-header3.jpg`) + ")"} />
       <Container align='center' className='layout-page-content'>

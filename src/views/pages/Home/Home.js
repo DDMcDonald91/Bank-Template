@@ -2,6 +2,7 @@
 import LandingPageHeader from 'components/Headers/LandingPageHeader'
 import ExamplesNavbar from 'components/Navbars/ExamplesNavbar'
 import React, { useState } from 'react'
+import SEO from 'components/SEO/SEO';
 import {
   Row,
   Col,
@@ -50,6 +51,12 @@ export default function Home() {
   
   return (
     <>
+    <SEO 
+        title='4Sons LLC || The Best Locksmiths' 
+        content='Welcome to 4Sons LLC, the best and most reliable locksmiths in the Shreveport/Bossier area. Learn about our various services!' 
+        page="https://www.4sonsllc.com/" 
+        keywords="Shreveport locksmith, Bossier City locksmith, Locksmith services Shreveport, Emergency locksmith Shreveport, Residential locksmith Bossier City, Commercial locksmith Shreveport-Bossier, Automotive locksmith Shreveport, Key duplication Shreveport, Lock repair Bossier City, Lockout service Shreveport, Rekeying locks Bossier City, Master key system Shreveport-Bossier, High-security locks Shreveport, Safe installation Bossier City, Access control systems Shreveport-Bossier, Locksmith near me Shreveport, 24-hour locksmith Shreveport-Bossier, Broken key extraction Shreveport, Lock installation Bossier City, Locksmith company Shreveport-Bossier"
+      />
         <ExamplesNavbar />
         <ShortenedLandingPageHeader />
 

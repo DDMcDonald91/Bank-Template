@@ -6,10 +6,17 @@ import { Container } from 'reactstrap';
 import LayoutHeader from '../../../components/Headers/LayoutHeader';
 import '../../../assets/css/custom.css'
 import DemoFooter from 'components/Footers/DemoFooter';
+import SEO from 'components/SEO/SEO';
 
 export default function About() {
   return (
     <div>
+      <SEO 
+    title='About 4Sons LLC || Shreveport/Bossier Locksmiths' 
+    content='Learn about 4Sons LLC, the leading locksmith company serving Shreveport/Bossier area. Discover our expertise, dedication, and commitment to providing top-notch locksmith services.' 
+    page="https://www.4sonsllc.com/about-us" 
+    keywords="Shreveport locksmiths, Bossier City locksmiths, locksmith company, locksmith services, Shreveport locksmith experts, Bossier City locksmith team"
+/>
       <ExamplesNavbar />
       <LayoutHeader title="About Us" image={"url(" + require(`assets/img/4sons-header5.jpg`) + ")"} />
       <Container align='center' className='layout-page-content'>

@@ -8,6 +8,7 @@ import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import LayoutHeader from "../../../components/Headers/LayoutHeader.js";
 import { Container, Button, Modal } from "reactstrap";
 import DemoFooter from "components/Footers/DemoFooter.js";
+import SEO from "components/SEO/SEO.js";
 
 export default function Industry() {
   const [data, setData] = useState();
@@ -58,13 +59,19 @@ export default function Industry() {
     <div>
       {data && (
         <>
+              <SEO 
+    title={`${data.industry} Locksmith Services by 4Sons LLC || Shreveport/Bossier Area`} 
+    content='Explore the comprehensive locksmith services offered by 4Sons LLC in the Shreveport/Bossier area. From residential to commercial locksmith solutions, we have you covered.'
+    page="https://www.4sonsllc.com/our-services:id" 
+    keywords="Shreveport locksmith services, Bossier City locksmith solutions, residential locksmith, commercial locksmith, automotive locksmith, key duplication, lock repair, lockout service, rekeying locks, master key system, high-security locks, safe installation, access control systems"
+/>
           <ExamplesNavbar />
-          {data.cover_img  ? <> (
+          {data.cover_img  ? <> 
             <LayoutHeader
               title={data.industry}
               image={`url(${data.cover_img})`}
             />
-          )
+          
           </>
           :
           <>
