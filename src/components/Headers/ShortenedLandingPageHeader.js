@@ -40,7 +40,7 @@ function ShortenedLandingPageHeader() {
         <div className="filter" />
         <Container>
           <div className="motto text-center">
-            <h1 style={{color: 'white', zIndex: '1000', textTransform: 'uppercase'}}>4Sons Locksmith LLC</h1>
+            <h1 style={{color: 'white', zIndex: '1000', textTransform: 'uppercase'}}>4Sons LLC</h1>
             <h3 style={{color: 'white', zIndex: '1000'}}>The best locksmiths in the Shreveport/Bossier area</h3>
             
           </div>

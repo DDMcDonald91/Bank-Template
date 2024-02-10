@@ -15,16 +15,16 @@ export default function About() {
       <Container align='center' className='layout-page-content'>
         <div>
         <p>
-          Welcome to 4Sons Locksmiths, your go-to 24/7 locksmith service catering to the Shreveport and Bossier City areas in the state of Louisiana. At 4Sons Locksmiths, we recognize that lock and key emergencies can arise at any hour, day or night. Our team of highly skilled and dependable locksmiths is committed to providing continuous assistance to ensure your safety and tranquility.          <br />
+          Welcome to 4Sons Locksmiths, your go-to locksmith service catering to the Shreveport and Bossier City areas in the state of Louisiana. At 4Sons LLC, we recognize that lock and key emergencies can arise at any hour, day or night. Our team of highly skilled and dependable locksmiths is committed to providing continuous assistance to ensure your safety and tranquility.          <br />
           <br />
-          Whether you're facing a lockout situation at home, in your car, or at your business, or if you urgently require help with a lock or key problem, count on us. Our adept and professional locksmiths come equipped with cutting-edge tools and technology to efficiently handle a diverse range of locksmith services.
+          Whether you're facing a lockout situation at home, in your car, or if you urgently require help with a lock or key problem, count on us. Our adept and professional locksmiths come equipped with cutting-edge tools and technology to efficiently handle a diverse range of locksmith services.
           <br />
           Customer satisfaction ranks high on our list of priorities, and we take pride in delivering top-notch services at competitive rates. With years of experience in the locksmith industry, we've established a reputation for reliability, trustworthiness, and excellence.
         </p>
         </div>
         <br />
         <div>
-          <h3>Why opt for 4Sons Locksmiths?</h3>
+          <h3>Why opt for 4Sons LLC?</h3>
           <br />
           <ul>
             <li><p>24/7 Emergency Service: We're available around the clock to assist you with any locksmith emergency.</p></li>
@@ -35,7 +35,7 @@ export default function About() {
         </div>
         <div>
           <p>
-            Your security is our paramount concern, and we are dedicated to providing you with the best locksmith solutions tailored to your specific needs. Trust 4Sons Locksmiths for reliable and efficient locksmith services in Shreveport and Bossier City. Contact us at any time, day or night, and experience the peace of mind that comes with having a trusted locksmith partner at your service.
+            Your security is our paramount concern, and we are dedicated to providing you with the best locksmith solutions tailored to your specific needs. Trust 4Sons LLC for reliable and efficient locksmith services in Shreveport and Bossier City. Contact us at any time, day or night, and experience the peace of mind that comes with having a trusted locksmith partner at your service.
           </p>
         </div>
       </Container>

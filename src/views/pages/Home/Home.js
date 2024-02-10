@@ -70,7 +70,7 @@ export default function Home() {
           </div>
             <Container align='center'>
                 <div>
-                  <p>Welcome to 4Sons Locksmiths, your go-to 24/7 locksmith service catering to the Shreveport and Bossier City areas in the state of Louisiana. At 4Sons Locksmiths, we recognize that lock and key emergencies can arise at any hour, day or night. Our team of highly skilled and dependable locksmiths is committed to providing continuous assistance to ensure your safety and tranquility.</p>
+                  <p>Welcome to 4Sons Locksmiths, your go-to locksmith service catering to the Shreveport and Bossier City areas in the state of Louisiana. At 4Sons LLC, we recognize that lock and key emergencies can arise at any hour, day or night. Our team of highly skilled and dependable locksmiths is committed to providing continuous assistance to ensure your safety and tranquility.</p>
                   <br /> 
                   <div className='section-image-lg'>
                   </div> 
@@ -164,7 +164,7 @@ export default function Home() {
             <div id='overlay'>
             <div align='center' id='newsletter-content'>
               <div className='section-title-container'>
-                  <h2 className='section-title heading'>24/7 Support</h2>
+                  <h2 className='section-title heading'>Reliable Support</h2>
                   <h4 className='section-subtitle'>We're here for you whenever you need us!</h4>
               </div>
               <div id='newsletter-container'>
